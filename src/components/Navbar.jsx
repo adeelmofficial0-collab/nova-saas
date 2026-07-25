@@ -11,9 +11,9 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-white dark:bg-[#0a0a0f] px-6 py-4 transition-colors border-b border-gray-200 dark:border-gray-800 shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Sparkles className="w-10 h-10 text-purple-500" />
+          <Sparkles className="w-10 h-10 text-purple-600" />
           <span className="text-gray-900 dark:text-white font-bold text-lg">
-            Nova<span className="text-purple-500 dark:text-purple-400">AI</span>
+            Nova<span className="text-purple-600 dark:text-purple-400">AI</span>
           </span>
         </div>
         <div className="hidden md:flex items-center gap-8">
@@ -30,13 +30,17 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-4">
           <button
             onClick={toggleTheme}
-            className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition"
+            className={`relative w-12 h-6 rounded-full transition-colors ${darkMode ? "bg-purple-600" : "bg-gray-300"
+              }`}
           >
-            {darkMode ? "☀️" : "🌙"}
+            <span
+              className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow-md transition-transform ${darkMode ? "translate-x-6" : "translate-x-0"
+                }`}
+            />
           </button>
           <a
             href="#contact"
-            className="bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium px-5 py-2 rounded-lg hover:opacity-90 transition"
+            className="bg-gradient-to-r from-purple-600 to-blue-500 text-white text-sm font-medium px-5 py-2 rounded-lg hover:opacity-90 transition"
           >
             Get Started
           </a>
@@ -61,12 +65,21 @@ const Navbar = () => {
             </a>
           ))}
 
-          <button
-            onClick={toggleTheme}
-            className="text-left text-gray-600 dark:text-gray-300 text-sm font-medium"
-          >
-            {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
-          </button>
+          <div className="flex items-center justify-between">
+            <span className="text-gray-600 dark:text-gray-300 text-sm font-medium">
+              {darkMode ? "Light Mode" : "Dark Mode"}
+            </span>
+            <button
+              onClick={toggleTheme}
+              className={`relative w-12 h-6 rounded-full transition-colors ${darkMode ? "bg-purple-600" : "bg-gray-300"
+                }`}
+            >
+              <span
+                className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow-md transition-transform ${darkMode ? "translate-x-6" : "translate-x-0"
+                  }`}
+              />
+            </button>
+          </div>
           <a
             href="#contact"
             onClick={() => setMenuOpen(false)}
