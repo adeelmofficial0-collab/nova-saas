@@ -83,7 +83,7 @@ const Navbar = () => {
           <a
             href="#contact"
             onClick={() => setMenuOpen(false)}
-            className="bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium px-5 py-2 rounded-lg text-center"
+            className="bg-gradient-to-r from-purple-400 to-blue-900 text-white text-sm font-medium px-5 py-2 rounded-lg text-center"
           >
             Get Started
           </a>

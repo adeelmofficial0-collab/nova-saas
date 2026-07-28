@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+html {
+    scroll-behavior: smooth;
+}
+
 @keyframes floatBox {
 
     0%,
@@ -27,18 +31,6 @@
     }
 }
 
-@keyframes trailFade {
-
-    0%,
-    100% {
-        opacity: 0.15;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-}
-
 .floating-box {
     animation: floatBox 6s ease-in-out infinite;
     background-color: transparent;
@@ -48,8 +40,4 @@
 .twinkle-star {
     animation: twinkle 2.5s ease-in-out infinite;
     box-shadow: 0 0 6px 2px currentColor, 0 0 12px 4px currentColor;
-}
-
-.light-trail {
-    animation: trailFade 4s ease-in-out infinite;
 }
