@@ -52,22 +52,23 @@ const Pricing = () => {
     return (
         <section
             id="pricing"
-            className="relative bg-white dark:bg-[#09101D] px-6 py-24 transition-colors overflow-hidden"
+            className="relative bg-white dark:bg-[#09101D] py-10 sm:py-16 overflow-hidden transition-colors
+                       shadow-[0_-40px_60px_-30px_rgba(0,0,0,0.08)] dark:shadow-[0_-40px_60px_-30px_rgba(0,0,0,0.6)]"
         >
-            <div className="relative max-w-6xl mx-auto text-center">
-                <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
+            <div className="relative max-w-6xl mx-auto text-center px-4 sm:px-6">
+                <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
                     Simple{" "}
                     <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
                         transparent
                     </span>{" "}
                     pricing
                 </h2>
-                <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg max-w-2xl mx-auto mt-4">
+                <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mt-4">
                     Choose the plan that fits your needs, Upgrade or downgrade anytime.
                 </p>
             </div>
 
-            <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-16 items-stretch">
+            <div className="relative grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto mt-12 md:mt-16 items-stretch px-4 sm:px-6">
                 {plans.map((plan, index) => {
                     const Icon = plan.icon;
                     return (
@@ -79,13 +80,13 @@ const Pricing = () => {
                             variants={fadeInUp}
                             transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
                             style={gridPatternStyle}
-                            className="relative h-full flex flex-col rounded-2xl p-6 border transition-all duration-300 bg-[#0B1220]/5 dark:bg-[#0B1220] border-gray-200 dark:border-white/5 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/10"
+                            className="relative h-full flex flex-col rounded-2xl p-5 sm:p-6 border transition-all duration-300 bg-gray-50 dark:bg-[#0B1220] border-gray-200 dark:border-white/5 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/10"
                         >
                             <div className="flex items-center justify-between mb-6">
-                                <span className="text-xs font-medium tracking-wider text-blue-400/60 dark:text-blue-400/50">
+                                <span className="text-xs font-medium tracking-wider text-blue-500 dark:text-blue-400/50">
                                     {plan.number}
                                 </span>
-                                <span className="text-xs font-semibold tracking-wide bg-blue-500/10 text-blue-300 border border-blue-500/20 px-3 py-1 rounded-full">
+                                <span className="text-xs font-semibold tracking-wide bg-blue-500/10 text-blue-600 dark:text-blue-300 border border-blue-500/20 px-3 py-1 rounded-full">
                                     {plan.badge}
                                 </span>
                             </div>

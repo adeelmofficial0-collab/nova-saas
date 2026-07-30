@@ -6,7 +6,7 @@ const Hero = () => {
             id="home"
             className="relative bg-white dark:bg-[#09101D] px-6 py-24 text-center transition-colors overflow-hidden"
         >
-              <HeroBackground />
+            <HeroBackground />
 
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight relative z-10">
                 Build Faster Scale Smarter <br />
