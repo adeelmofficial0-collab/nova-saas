@@ -46,13 +46,13 @@ const HeroBackground = () => {
     return (
         <>
             <div
-                className="absolute inset-0 -z-30 hidden dark:block opacity-[0.2]"
+                className="absolute inset-0 -z-30 hidden dark:block opacity-[0.5]"
                 style={{
                     backgroundImage:
-                        "linear-gradient(to right, #8b5cf6 1px, transparent 1px), linear-gradient(to bottom, #8b5cf6 1px, transparent 1px)",
-                    backgroundSize: "48px 48px",
-                    maskImage: "radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 100%)",
-                    WebkitMaskImage: "radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 100%)",
+                        "linear-gradient(to right,  rgba(139,92,246,0.35) 1px, transparent 1px), linear-gradient(to bottom,  rgba(139,92,246,0.35) 1px, transparent 1px)",
+                    backgroundSize: "32px 32px",
+                    // maskImage: "radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 100%)",
+                    // WebkitMaskImage: "radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 100%)",
                 }}
             />
 
