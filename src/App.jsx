@@ -5,6 +5,8 @@ import Features from './components/Features'
 import Pricing from './components/Pricing'
 import Testimonials from './components/Testimonials'
 import Faq from './components/Faq'
+import ContactForm from './components/Contact/ContactForm'
+import Footer from './components/Footer'
 const App = () => {
   return (
     <div className="bg-white dark:bg-[#080E1A] min-h-screen">
@@ -15,6 +17,8 @@ const App = () => {
         <Pricing />
         <Testimonials />
         <Faq />
+        <ContactForm />
+        <Footer />
       </>
     </div>
   )
