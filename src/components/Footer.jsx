@@ -19,15 +19,11 @@ const NAV_LINKS = [
     { label: "Contact", href: "#contact" },
 ];
 
-const CURRENT_YEAR = new Date().getFullYear();
-
 const SocialLink = ({ icon: Icon, href, label }) => (
     <a
         href={href}
         aria-label={label}
-        className="w-10 h-10 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5
-                   flex items-center justify-center text-gray-500 dark:text-gray-300
-                   hover:text-blue-400 hover:border-blue-500/40 transition-colors duration-300"
+        className="w-10 h-10 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 flex items-center justify-center text-gray-500 dark:text-gray-300 hover:text-blue-400 hover:border-blue-500/40 transition-colors duration-300"
     >
         <Icon size={16} aria-hidden="true" />
     </a>
@@ -36,8 +32,7 @@ const SocialLink = ({ icon: Icon, href, label }) => (
 const FooterNavLink = ({ label, href }) => (
     <a
         href={href}
-        className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white
-                   transition-colors duration-300"
+        className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
     >
         {label}
     </a>
@@ -46,9 +41,7 @@ const FooterNavLink = ({ label, href }) => (
 const BrandWatermark = () => (
     <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-center
-                   text-[80px] sm:text-[140px] md:text-[180px] font-extrabold leading-none select-none whitespace-nowrap
-                   text-gray-900/5 dark:text-white/5"
+        className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-center text-[80px] sm:text-[140px] md:text-[180px] font-extrabold leading-none select-none whitespace-nowrap text-gray-900/5 dark:text-white/5"
     >
         NOVA
     </span>
@@ -57,7 +50,7 @@ const BrandWatermark = () => (
 const FooterDivider = () => (
     <div className="relative max-w-5xl mx-auto mt-10 sm:mt-14 px-4 sm:px-6">
         <div className="h-px w-full bg-gray-200 dark:bg-white/10" />
-        <div className="flex justify-center -mt-5">
+        <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl border border-blue-500/30 bg-white dark:bg-[#09101D] flex items-center justify-center">
                 <span className="text-blue-400 font-bold text-lg sm:text-xl">N</span>
             </div>
@@ -67,11 +60,11 @@ const FooterDivider = () => (
 
 const Footer = () => {
     return (
-        <footer className="relative bg-white dark:bg-[#09101D] overflow-hidden py-14 sm:py-20 transition-colors">
+        <footer className="relative bg-white dark:bg-[#09101D] overflow-hidden py-14 sm:py-20 transition-colors border-t border-gray-200 dark:border-white/10">
             <BrandWatermark />
 
             <div className="relative max-w-3xl mx-auto text-center px-4 sm:px-6">
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">Nova</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">NoVA</h2>
                 <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base mt-2">
                     Practical tools for teams that want to move faster.
                 </p>
@@ -93,10 +86,6 @@ const Footer = () => {
             </div>
 
             <FooterDivider />
-
-            <p className="relative text-center text-xs text-gray-500 mt-6">
-                 {CURRENT_YEAR} Nova. All rights reserved.
-            </p>
         </footer>
     );
 };

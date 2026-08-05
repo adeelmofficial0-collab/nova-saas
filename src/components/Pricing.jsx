@@ -52,16 +52,11 @@ const Pricing = () => {
     return (
         <section
             id="pricing"
-            className="relative bg-white dark:bg-[#09101D] py-10 sm:py-16 overflow-hidden transition-colors
-                       shadow-[0_-40px_60px_-30px_rgba(0,0,0,0.08)] dark:shadow-[0_-40px_60px_-30px_rgba(0,0,0,0.6)]"
+            className="relative bg-white dark:bg-[#09101D] py-10 sm:py-16 overflow-hidden transition-colors shadow-[0_-40px_60px_-30px_rgba(0,0,0,0.08)] dark:shadow-[0_-40px_60px_-30px_rgba(0,0,0,0.6)]"
         >
             <div className="relative max-w-6xl mx-auto text-center px-4 sm:px-6">
                 <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
-                    Simple{" "}
-                    <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
-                        transparent
-                    </span>{" "}
-                    pricing
+                    Simple <span className="text-blue-400">transparent</span> pricing
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mt-4">
                     Choose the plan that fits your needs, Upgrade or downgrade anytime.
@@ -92,7 +87,7 @@ const Pricing = () => {
                             </div>
 
                             <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-blue-500/10 border border-blue-500/20 mb-6">
-                                <Icon size={24} className="text-blue-400" />
+                                <Icon size={24} className="text-blue-400" aria-hidden="true" />
                             </div>
 
                             <h3 className="text-xl font-bold text-gray-900 dark:text-white">{plan.name}</h3>
@@ -106,7 +101,7 @@ const Pricing = () => {
                             <ul className="mt-4 space-y-2 flex-1">
                                 {plan.features.map((feature) => (
                                     <li key={feature} className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
-                                        <Check size={16} className="text-blue-400 shrink-0" />
+                                        <Check size={16} className="text-blue-400 shrink-0" aria-hidden="true" />
                                         {feature}
                                     </li>
                                 ))}
@@ -114,9 +109,9 @@ const Pricing = () => {
 
                             <a
                                 href="#contact"
-                                className={`block text-center mt-6 px-6 py-3 rounded-lg font-medium transition ${plan.highlighted
-                                    ? "bg-gradient-to-r from-purple-600 to-blue-500 text-white hover:opacity-90"
-                                    : "border border-gray-300 dark:border-white/10 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/5"
+                                className={`block text-center mt-6 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${plan.highlighted
+                                        ? "bg-[#58A8FF] text-[#111827] border border-[#7FC0FF]/40 shadow-[0_0_25px_rgba(88,168,255,0.45)] hover:bg-[#66B3FF] hover:shadow-[0_0_35px_rgba(88,168,255,0.65)]"
+                                        : "border border-gray-300 dark:border-white/10 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/5"
                                     }`}
                             >
                                 Get Started

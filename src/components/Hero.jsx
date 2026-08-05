@@ -10,9 +10,7 @@ const Hero = () => {
 
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight relative z-10">
                 Build Faster Scale Smarter <br />
-                <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
-                    Grow with Nova
-                </span>
+                <span className="text-blue-400">Grow with Nova</span>
             </h1>
 
             <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg max-w-2xl mx-auto mt-6 relative z-10">
@@ -23,7 +21,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 relative z-10">
                 <a
                     href="#pricing"
-                    className="bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium px-6 py-3 rounded-lg hover:to-indigo-600 transition"
+                    className="bg-gradient-to-b from-[#5DAEFF] to-[#4290DE] text-[#111827] font-medium px-6 py-3 rounded-xl border border-blue-300/20 shadow-[0_0_18px_rgba(66,144,222,0.35)] hover:shadow-[0_0_28px_rgba(66,144,222,0.5)] hover:from-[#6AB6FF] hover:to-[#4A9BFF] transition-all duration-300"
                 >
                     Get Started Free
                 </a>

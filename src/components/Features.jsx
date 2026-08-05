@@ -63,7 +63,7 @@ const Features = () => {
             <div className="relative max-w-6xl mx-auto text-center">
                 <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
                     Everything you need to{" "}
-                    <span className="block text-blue-500">scale</span>
+                    <span className="block text-blue-400">scale</span>
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mt-4">
                     Powerful features designed to help modern teams move faster and work smarter.
@@ -82,7 +82,7 @@ const Features = () => {
                         className={cardClasses}
                     >
                         <div className="w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-4">
-                            <Icon size={20} className="text-blue-400" />
+                            <Icon size={20} className="text-blue-400" aria-hidden="true" />
                         </div>
                         <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
                             {title}

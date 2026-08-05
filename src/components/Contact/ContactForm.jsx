@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import ContactInfoItem from "./ContactInfoItem";
+import FormField from "./FormField";
 
 const contactDetails = [
     { icon: Mail, label: "Email", value: "adeelmofficial0@gmail.com", href: "mailto:adeelmofficial0@gmail.com" },
@@ -9,9 +10,6 @@ const contactDetails = [
 ];
 
 const emailRegex = /^\S+@\S+\.\S+$/;
-
-const inputClasses =
-    "w-full bg-white dark:bg-[#0B1220] border border-gray-200 dark:border-white/10 rounded-lg px-4 py-2.5 sm:py-3 text-sm text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:border-blue-500/40 transition-colors";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -60,7 +58,7 @@ const ContactForm = () => {
     return (
         <section
             id="contact"
-            className="relative bg-white dark:bg-[#09101D] py-10 sm:py-10 transition-colors"
+            className="relative bg-white dark:bg-[#0D1424] py-10 sm:py-10 transition-colors border-t border-gray-200 dark:border-white/10"
         >
             <header className="relative max-w-3xl mx-auto text-center px-4 sm:px-6">
                 <span className="inline-block text-xs sm:text-sm font-semibold text-blue-500 dark:text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 mb-4">
@@ -68,7 +66,7 @@ const ContactForm = () => {
                 </span>
                 <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
                     Let's get in{" "}
-                    <span className="block text-blue-500">touch</span>
+                    <span className="block text-blue-400">touch</span>
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base md:text-lg mt-4">
                     Have a question or want to work together? Send us a message.
@@ -83,51 +81,40 @@ const ContactForm = () => {
                 </div>
 
                 <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-4">
-                    <div>
-                        <label htmlFor="name" className="sr-only">Name</label>
-                        <input
-                            id="name"
-                            name="name"
-                            type="text"
-                            placeholder="Your name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            className={inputClasses}
-                        />
-                        {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name}</p>}
-                    </div>
+                    <FormField
+                        id="name"
+                        label="Name"
+                        type="text"
+                        placeholder="Your name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        error={errors.name}
+                    />
 
-                    <div>
-                        <label htmlFor="email" className="sr-only">Email</label>
-                        <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            placeholder="Your email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            className={inputClasses}
-                        />
-                        {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email}</p>}
-                    </div>
+                    <FormField
+                        id="email"
+                        label="Email"
+                        type="email"
+                        placeholder="Your email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        error={errors.email}
+                    />
 
-                    <div>
-                        <label htmlFor="message" className="sr-only">Message</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows={5}
-                            placeholder="Your message"
-                            value={formData.message}
-                            onChange={handleChange}
-                            className={`${inputClasses} resize-none`}
-                        />
-                        {errors.message && <p className="text-xs text-red-500 mt-1">{errors.message}</p>}
-                    </div>
+                    <FormField
+                        id="message"
+                        label="Message"
+                        as="textarea"
+                        rows={5}
+                        placeholder="Your message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        error={errors.message}
+                    />
 
                     <button
                         type="submit"
-                        className="flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold rounded-lg px-6 py-3 transition-colors duration-300"
+                        className="flex items-center justify-center gap-2 bg-[#58A8FF] text-[#111827] text-sm font-semibold rounded-lg px-6 py-3 border border-[#7FC0FF]/40 shadow-[0_0_25px_rgba(88,168,255,0.45)] hover:bg-[#66B3FF] hover:shadow-[0_0_35px_rgba(88,168,255,0.65)] transition-all duration-300"
                     >
                         Send Message
                         <Send size={16} aria-hidden="true" />
